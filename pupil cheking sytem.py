@@ -63,6 +63,8 @@ def modify():
         if command == 'y':
             new_name = input('Enter the name ')
             school[roll][new_name] = (school[roll]).pop(name)
+            name = new_name
+
         if command == 'n':
             print('Mark',catagories[n],end=' ')
             point = int(input())
@@ -88,6 +90,7 @@ def delete_record():
     print()
     school.pop(roll)
     print()
+
 def clases_result():
     choice = input('Enter the roll you want to search: ')
     print()
@@ -99,6 +102,7 @@ def clases_result():
             for k, v in i.items():
                 print(k, v)
     print()
+
 def pupil_record():
     print()
     print('Roll  Name',' '*10,'English Maths Physics Chemistry CS ')
